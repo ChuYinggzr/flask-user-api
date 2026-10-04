@@ -1,0 +1,52 @@
+:root {
+  font-family: Inter, "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  color: #14213d;
+  background: #f4f7fb;
+  font-synthesis: none;
+  --navy: #102544;
+  --navy-soft: #183961;
+  --blue: #356cfb;
+  --cyan: #22b8cf;
+  --surface: #ffffff;
+  --muted: #71819b;
+  --line: #e8edf5;
+  --shadow: 0 16px 42px rgba(22, 44, 84, 0.09);
+}
+
+* { box-sizing: border-box; }
+html, body, #app { min-width: 320px; min-height: 100%; margin: 0; }
+body { min-height: 100vh; background: #f4f7fb; }
+button, input, textarea, select { font: inherit; }
+
+.page-shell { padding: 28px 30px 36px; }
+.page-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 22px; }
+.page-heading h1 { margin: 0; font-size: 27px; color: #13233f; letter-spacing: -0.5px; }
+.page-heading p { margin: 7px 0 0; color: var(--muted); font-size: 14px; }
+.panel { background: var(--surface); border: 1px solid rgba(222, 230, 242, 0.85); border-radius: 18px; box-shadow: var(--shadow); }
+.toolbar { display: flex; gap: 12px; align-items: center; padding: 18px 20px; border-bottom: 1px solid var(--line); }
+.toolbar .search-input { width: min(360px, 100%); }
+.table-wrap { padding: 4px 20px 18px; }
+.pagination-row { display: flex; justify-content: flex-end; padding: 16px 0 2px; }
+.dialog-form .el-form-item { margin-bottom: 20px; }
+.dialog-form .el-input, .dialog-form .el-select, .dialog-form .el-input-number { width: 100%; }
+.danger-text { color: #e05260; }
+
+.el-button { border-radius: 10px; font-weight: 600; }
+.el-button--primary { --el-button-bg-color: var(--blue); --el-button-border-color: var(--blue); }
+.el-input__wrapper, .el-select__wrapper { border-radius: 10px; box-shadow: 0 0 0 1px #dfe6f1 inset; }
+.el-dialog { border-radius: 18px; overflow: hidden; }
+.el-dialog__header { padding: 22px 24px 12px; }
+.el-dialog__body { padding: 14px 24px 4px; }
+.el-table { --el-table-header-bg-color: #f7f9fc; --el-table-border-color: #edf1f7; color: #263752; }
+.el-table th.el-table__cell { color: #60708a; font-weight: 700; height: 50px; }
+.el-table td.el-table__cell { height: 54px; }
+
+@media (max-width: 760px) {
+  .page-shell { padding: 20px 14px 28px; }
+  .page-heading { align-items: stretch; flex-direction: column; }
+  .page-heading .el-button { width: 100%; }
+  .toolbar { align-items: stretch; flex-direction: column; }
+  .toolbar .search-input { width: 100%; }
+  .table-wrap { padding: 0 12px 14px; overflow-x: auto; }
+  .pagination-row { justify-content: center; }
+}
