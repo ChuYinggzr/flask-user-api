@@ -6,6 +6,3 @@ __pycache__/
 .pytest_cache/
 .idea/
 migrations/__pycache__/
-instance/
-frontend/node_modules/
-frontend/dist/
